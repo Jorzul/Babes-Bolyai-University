@@ -1,1 +1,4 @@
-# Remember to commit and push your work to GitHub.
+# Info
+
+This is the files for the practical exam for the FP.
+You can also find the exam problem as a jpg.
