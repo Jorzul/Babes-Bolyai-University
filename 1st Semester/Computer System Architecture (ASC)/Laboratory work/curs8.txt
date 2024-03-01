@@ -1,0 +1,24 @@
+variable = (name, set of atributes, reference, value)
+			\
+			(type, variability domain, lifetime, memory dass)
+				 (scope)		/         \
+						     (extent)   (auto, register,
+							/	 static, extern)
+						    temporal
+alocare: (allocation):
+
+	GDS - global variables
+	Stack - local variables
+	heap - dynamic variables (pointers)
+
+definition = declaring its atributes + allocation
+		(many times)		(unique)
+
+a2 TIMES 3 db 44h
+
+a4 db a2 + 1   - SYNTAX ERROR (nu incape un word (a2+1) pe un byte)
+a5 dw a2     - asta merge
+
+
+a6 TIMES 4 db '13'
+a61 TIMES 4 dw '13'   NICI O DIFERENTA !

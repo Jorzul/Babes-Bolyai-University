@@ -1,0 +1,73 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll
+    10                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    11                                  
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  
+    14                                  segment data use32 class=data
+    15 00000000 256300                      format_ascii db "%c", 0
+    16 00000003 257500                      format_base8 db "%u", 0
+    17                                  
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      base8ascii:
+    21                                          
+    22 00000000 3C08                            cmp AL, 8
+    23 00000002 7304                            jae exit_base_loop
+    24                                          
+    25 00000004 B108                            mov CL, 8
+    26                                          
+    27                                          base_loop:
+    28                                          
+    29 00000006 D0E0                                shl AL, 1
+    30                                          
+    31                                          exit_base_loop:
+    32                                          
+    33 00000008 C3                              ret
+    34                                          
+    35                                      start:
+    36 00000009 B320                            mov BL, 32
+    37                                          
+    38                                          while_loop:
+    39                                              
+    40 0000000B B800000000                          mov EAX, 0
+    41 00000010 88D8                                mov AL, BL
+    42                                              
+    43 00000012 50                                  push EAX
+    44 00000013 68[03000000]                        push dword format_base8
+    45 00000018 FF15[00000000]                      call [printf]
+    46                                              
+    47 0000001E 83C408                              add esp, 4*2
+    48 00000021 88D8                                mov AL, BL
+    49                                              
+    50 00000023 50                                  push EAX
+    51 00000024 68[00000000]                        push dword format_ascii
+    52 00000029 FF15[00000000]                      call [printf]
+    53                                              
+    54 0000002F 83C408                              add esp, 4*2
+    55                                              
+    56 00000032 88D8                                mov AL, BL
+    57 00000034 B10A                                mov CL, 10
+    58 00000036 B400                                mov AH, 0
+    59                                              
+    60 00000038 F6F1                                div CL
+    61                                              
+    62 0000003A 80FC07                              cmp AH, 7
+    63 0000003D 7503                                jne jumpp
+    64 0000003F 80C302                              add BL, 2
+    65                                              jumpp:
+    66 00000042 80C301                              add BL, 1
+    67 00000045 80FB7E                              cmp BL, 126
+    68                                              
+    69 00000048 76C1                                jbe while_loop
+    70                                      
+    71                                          ; exit(0)
+    72 0000004A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    73 0000004C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

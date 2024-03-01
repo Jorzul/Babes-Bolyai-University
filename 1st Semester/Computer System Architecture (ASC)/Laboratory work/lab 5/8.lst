@@ -1,0 +1,40 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 614162423225784D            s db 'a', 'A', 'b', 'B', '2', '%', 'x', 'M' ; declare the string of bytes
+    14                                  	l equ $-s ; compute the length of the string in l
+    15 00000008 00                      	d db 0 ; reserve l bytes for the destination string and initialize it
+    16                                  
+    17                                  ; our code starts here
+    18                                  segment code use32 class=code
+    19                                      start:
+    20 00000000 B908000000                      mov ecx, l ; we put the length l in ECX in order to make the loop
+    21 00000005 BE00000000                      mov esi, 0     
+    22 0000000A BF00000000                      mov edi, 0
+    23 0000000F E31E                            jecxz Exit      
+    24                                          Repeat:
+    25 00000011 8A86[00000000]                      mov al, [s+esi]
+    26 00000017 2C41                                sub al, 'A'
+    27 00000019 B319                                mov bl, 'Z' - 'A'
+    28 0000001B 38D8                                cmp al, bl
+    29 0000001D 770D                                jnbe notOK
+    30 0000001F 8A86[00000000]                      mov al, [s+esi]
+    31 00000025 8887[08000000]                      mov [d+edi], al
+    32 0000002B 47                                  inc edi
+    33                                              notOK:
+    34 0000002C 46                                  inc esi
+    35 0000002D E2E2                            loop Repeat
+    36                                          Exit:       ;end of the program
+    37                                      
+    38                                          ; exit(0)
+    39 0000002F 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    40 00000031 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
