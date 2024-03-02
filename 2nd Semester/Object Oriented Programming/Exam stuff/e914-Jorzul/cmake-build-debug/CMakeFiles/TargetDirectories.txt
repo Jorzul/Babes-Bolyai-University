@@ -1,0 +1,5 @@
+C:/Users/User/OneDrive/Documents/GitHub/e914-Jorzul/cmake-build-debug/CMakeFiles/e914-Jorzul.dir
+C:/Users/User/OneDrive/Documents/GitHub/e914-Jorzul/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Documents/GitHub/e914-Jorzul/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/User/OneDrive/Documents/GitHub/e914-Jorzul/cmake-build-debug/CMakeFiles/e914-Jorzul_autogen_timestamp_deps.dir
+C:/Users/User/OneDrive/Documents/GitHub/e914-Jorzul/cmake-build-debug/CMakeFiles/e914-Jorzul_autogen.dir
