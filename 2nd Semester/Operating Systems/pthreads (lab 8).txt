@@ -1,0 +1,19 @@
+LABORATORY 8
+
+
+void* thread_function(void *param)
+
+pthread_create(&thr[i], NULL, thread_function, NULL);
+
+parametrul 1 (&thr[i]) : pointer spre thread-ul pe care l-ai creat
+
+parametrul 2 (NULL) : un pointer spre ce returneaza functia
+		noi avem return 0, daca punem altceva gen return 10
+		si in loc de NULL un pointer spre o variabila,
+		vom avea 10 stackat in variabila.
+
+parametrul 3 (thread_function) : e functia pe care o apelam
+
+parametrul 4 (NULL) : e parametrul de la functie, adica void *param
+			daca punem un parametru acolo il va folosi in loc de void *param
+			dar nu trebuie modificat (scrii tot void *param)

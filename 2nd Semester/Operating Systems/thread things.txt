@@ -1,0 +1,149 @@
+if Permission denied:
+chmod +x <nume>.c
+
+gcc -pthread -Wall -Werror source.c -o output
+
+valgrind ./output
+
+````````````````````````````````````````````````````````````
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+#define ARR_SIZE 10000
+
+#define THR_COUNT 4
+
+typedef struct { 
+    int *array;     // the array to process
+    int idx_start;  // the start index in the array
+    int idx_end;    // the end index in the array
+}THR_PARAM;
+
+int global_sum = 0;
+
+void* array_sum(void *param)
+{
+    THR_PARAM thr_param;
+    int local_sum = 0;  
+
+    thr_param = *(THR_PARAM*)param;
+
+    for (int i = thr_param.idx_start; i < thr_param.idx_end; i++)
+        local_sum = local_sum + thr_param.array[i];
+
+    global_sum = global_sum + local_sum;
+
+    return 0;
+}
+
+int main()
+{
+    int array[ARR_SIZE];
+    pthread_t thr[THR_COUNT];
+    THR_PARAM thr_param[THR_COUNT];
+
+    for (i = 0; i < ARR_SIZE; i++)
+        array[i] = 1;
+
+    for (i = 0; i < THR_COUNT; i++)
+    {
+        thr_param[i].array = array;
+        thr_param[i].idx_start = (ARR_SIZE / THR_COUNT) * i;
+        thr_param[i].idx_end = (ARR_SIZE / THR_COUNT) * (i + 1);
+
+        pthread_create(&thr[i], NULL, array_sum, (void*)&thr_param[i]);
+    }
+
+    for (i = 0; i < THR_COUNT; i++)
+        pthread_join(thr[i], NULL);
+
+    printf("Sum = %d\n", global_sum);
+
+    return 0;
+}
+
+
+```````````````````````````````````````````````````````````````````````````
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <string.h>
+
+#define NUM_THREADS 5
+
+typedef struct {
+    char* sentence;
+    int index;
+} ThreadArgs;
+
+void* reverseWord(void* arg) {
+    ThreadArgs* args = (ThreadArgs*)arg;
+    char* word = strtok(args->sentence, " ");
+    int count = 0;
+    
+    // Parcurgem cuvintele până la indicele corespunzător thread-ului
+    while (word != NULL && count < args->index) {
+        word = strtok(NULL, " ");
+        count++;
+    }
+    
+    // Inversăm cuvântul
+    if (word != NULL) {
+        int length = strlen(word);
+        char* reversed = (char*)malloc((length + 1) * sizeof(char));
+        
+        for (int i = 0; i < length; i++) {
+            reversed[i] = word[length - i - 1];
+        }
+        
+        reversed[length] = '\0';
+        args->sentence = strcat(args->sentence, " ");  // Adăugăm spațiu între cuvinte
+        args->sentence = strcat(args->sentence, reversed);
+        free(reversed);
+    }
+    
+    pthread_exit(NULL);
+}
+
+int main() {
+    char sentence[100];
+    printf("Introduceti o propozitie: ");
+    fgets(sentence, sizeof(sentence), stdin);
+    
+    if (sentence[strlen(sentence) - 1] == '\n') {
+        sentence[strlen(sentence) - 1] = '\0';
+    }
+    
+    char* word = strtok(sentence, " ");
+    int wordCount = 0;
+    
+    while (word != NULL) {
+        word = strtok(NULL, " ");
+        wordCount++;
+    }
+    
+    if (wordCount < 6) {
+        printf("Propozitia trebuie sa contina cel putin 6 cuvinte.\n");
+        return 0;
+    }
+    
+    pthread_t threads[NUM_THREADS];
+    ThreadArgs threadArgs[NUM_THREADS];
+    
+    for (int i = 0; i < NUM_THREADS; i++) {
+        threadArgs[i].sentence = strdup(sentence);
+        threadArgs[i].index = i;
+        pthread_create(&threads[i], NULL, reverseWord, (void*)&threadArgs[i]);
+    }
+    
+    for (int i = 0; i < NUM_THREADS; i++) {
+        pthread_join(threads[i], NULL);
+    }
+    
+    printf("Propozitia inversata: %s\n", sentence);
+    
+    return 0;
+}

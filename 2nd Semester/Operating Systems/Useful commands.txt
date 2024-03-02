@@ -1,0 +1,66 @@
+Deschizi in VIM cu numele <nume.c>
+vim <nume.c>
+
+ls -l
+
+Pentru a scrie in fisierul vim, apesi 'a' sau 'i'
+Pentru a salva ce ai scris 'ESC -> :w -> ENTER'
+
+In VIM cu C:
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char** argv)
+{
+	....
+}
+
+Pentru a rula programul scris in C si printeaza rezultatul in <nume>
+gcc -Wall -Werror -g <nume.c> -o <nume>
+
+./<nume>
+Vezi rezultatul din <nume>.
+
+valgrind ./<nume>
+Vezi rezultatul mai jmek din <nume>.
+
+./<nume> sfdaajk dafk dasj fdfsa "fasd dfasf"
+     0       1     2    3    4        5
+argc = 6
+argv[0] = <nume> , argv[1] = sfdaajk , argv[2] = dafk , argv[3] = dasj , etc etc
+La fel si cu valgrind ./<nume> sfdaajk dafk dasj fdfsa "fasd dfasf"
+
+Daca nu stii ce face o functie:
+man 3 <functie>
+ITI ZICE TOT DESPRE FUNCTIE!
+
+Display the lines of all users who have at least 5 vowels in their username.
+grep -i -E "^[^:]*([aeiou][^:]*){5,}:" /etc/passwd
+
+-i = ignore upper case/ lower case
+-v = not
+
+Display the lines of all the users not having bash as their shell.
+grep -v "/bash$" /etc/passwd
+
+Display the lines of all users named Ion. We will have to search in the user info field 
+(the fifth field) of each line.
+grep -i -E "^([^:]*:){4}[^:]*\<ion\>" /etc/passwd
+
+Display all lines containing an email address
+What does an email address look like?
+It has 1. username
+	2. @
+	3. hostname (yahoo.com or yahoo.co.uk)
+
+grep -i -E "\<[^@*\!?]+@[a-z0-9_-]+(.[a-z0-9_-]+)+\>" a.txt
+
+
+
+BASH (SH) THINGS:
+
+1. vim <nume>.sh
+2. scrii chestii acolo bada bim bada bum
+3. dai save si iesi
+4. chmod +x <nume>.sh      - cu asta dai build gen
+5. ./<nume>.sh            - cu asta dai run

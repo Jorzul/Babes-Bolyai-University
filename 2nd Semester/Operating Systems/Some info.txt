@@ -1,0 +1,69 @@
+"Citeste de la tastatura pana e cuvantul stop."
+"Daca ce ai citit e fisier, atunci sa modifice cuvantul ana din el,
+daca e directory, sa afiseze cel mai recent modificat fisier,
+daca e altceva, sa il afiseze."
+La final afiseaza statistici (cat la suta din input au fost fisiere, directory sau others)
+
+#!/bin/bash
+
+files=0
+directory=0
+others=0
+total=0
+
+input=""
+read input
+while [ "$input" != "stop" ] ; do
+	if [ -f $input ] ; then
+		sed -i -E s/ana/ /g $input
+		files=$(($files+1))
+	elif [ -d $input ] ; then
+		directory=$(($directory+1))
+		grep 
+	else
+		echo "Input is $input"
+		others=$(($others+1))
+	fi
+	
+	total=$(($total+1))
+	read input
+done
+
+if [ %total -eq 0 ] ; then
+	total=1
+fi
+
+perfile=$(($files*100))
+perfile=$(($perfile/$total))
+
+echo "Files: $perfile percent"
+
+````````````````````````````````````````````````
+
+ARGUMENTE:
+
+for A in $@; do
+	echo Arg A: $A
+done
+
+./for-args.sh a b c d e f g h i j k l m n o
+Arg A: a
+Arg A: b
+Arg A: c
+
+`````````````````````````````````````````````````
+
+-eq   ==
+-ne   !=
+-gt   >
+-ge   >=
+-lt   <
+-le   <=
+
+``````````````````````````````````````````````````
+
+printf("Name: ");
+fgets(name, 50, stdin);
+name[strcspn(name, "\n")] = '\0';
+
+Car* new_carList = (Car*)malloc(_capacity * sizeof(Car));
