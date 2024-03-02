@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/Documents/GitHub/t3-Jorzul/cmake-build-debug/CMakeFiles/t3_Jorzul.dir
+C:/Users/User/OneDrive/Documents/GitHub/t3-Jorzul/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Documents/GitHub/t3-Jorzul/cmake-build-debug/CMakeFiles/rebuild_cache.dir
