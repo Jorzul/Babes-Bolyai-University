@@ -1,0 +1,17 @@
+# ninja log v5
+11	177	7018111436259210	CMakeFiles/copy.dir/Material.c.obj	23713a68a450c547
+1	205	7018111436391307	CMakeFiles/copy.dir/DynamicArray.c.obj	9576ba4eb611539f
+18	215	7018111436435804	CMakeFiles/copy.dir/Service.c.obj	56102d85e70b020a
+6	233	7018111436631794	CMakeFiles/copy.dir/main.c.obj	94f1da9fd5ec9651
+28	259	7018111436945688	CMakeFiles/copy.dir/Repository.c.obj	b0fd65a9727f6f91
+35	265	7018111437225214	CMakeFiles/copy.dir/UI.c.obj	fe14bd9bb599029c
+178	307	7018111437657846	CMakeFiles/copy.dir/UndoRedo.c.obj	dd94bf1ba47dc6b8
+215	340	7018111437991736	CMakeFiles/copy.dir/Validation.c.obj	f2561431aa75643e
+205	398	7018111438564934	CMakeFiles/copy.dir/Tests.c.obj	53127c19d1ae13c7
+1	102	7018117020842122	CMakeFiles/copy.dir/UI.c.obj	fe14bd9bb599029c
+3	74	7018117267371723	CMakeFiles/copy.dir/main.c.obj	94f1da9fd5ec9651
+2	96	7018117655485629	CMakeFiles/copy.dir/main.c.obj	94f1da9fd5ec9651
+2	117	7018120964097217	CMakeFiles/copy.dir/UI.c.obj	fe14bd9bb599029c
+118	235	7018120965202768	copy.exe	9d44531c6afa45f
+1	105	7018125150628003	CMakeFiles/copy.dir/UI.c.obj	fe14bd9bb599029c
+106	236	7018125151882864	copy.exe	9d44531c6afa45f

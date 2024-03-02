@@ -1,0 +1,8 @@
+# ninja log v5
+12	158	7030272738072035	CMakeFiles/norbi.dir/Movie.cpp.obj	3a0bab962f67c234
+0	447	7030272740943087	CMakeFiles/norbi.dir/App.cpp.obj	759c41396677d1d8
+6	479	7030272741304169	CMakeFiles/norbi.dir/Repository.cpp.obj	2641bac9ca43c585
+25	486	7030272741362010	CMakeFiles/norbi.dir/Service.cpp.obj	ef8cd87a41fa0f49
+19	4433	7030272780828301	CMakeFiles/norbi.dir/Console.cpp.obj	b7f3a0da89a1004d
+4435	4552	7030272781979557	norbi.exe	231fdc8d2e08042d
+3	1257	7083848526794982	CMakeFiles/norbi.dir/Console.cpp.obj	b7f3a0da89a1004d
