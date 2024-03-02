@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/Seminar4_Week1_stub/cmake-build-debug/CMakeFiles/Seminar4_Week1_stub.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/Seminar4_Week1_stub/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/Seminar4_Week1_stub/cmake-build-debug/CMakeFiles/rebuild_cache.dir
