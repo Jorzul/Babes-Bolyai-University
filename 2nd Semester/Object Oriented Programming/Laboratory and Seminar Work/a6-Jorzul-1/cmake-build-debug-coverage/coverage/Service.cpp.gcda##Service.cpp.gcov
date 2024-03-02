@@ -1,0 +1,357 @@
+        -:    0:Source:C:/Users/User/OneDrive/Documents/GitHub/a6-Jorzul-1/Service/Service.cpp
+        -:    0:Graph:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Service\Service.cpp.gcno
+        -:    0:Data:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Service\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by User on 5/4/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include <algorithm>
+        -:    6:#include "Service.h"
+        -:    7:using namespace std;
+        -:    8:
+function _ZN7ServiceC2ER10Repository called 3 returned 100% blocks executed 100%
+        3:    9:Service::Service(Repository& repository)
+        -:   10:/*
+        -:   11: * Constructor that takes a reference to a repository and sets the `_repository` pointer.
+        -:   12:*
+        -:   13:* parameters: repository: The repository to use for managing movies.
+        -:   14:*/
+        -:   15:{
+        3:   16:    _repository = &repository;
+        3:   17:}
+        -:   18:
+function _ZN7ServiceD2Ev called 3 returned 100% blocks executed 100%
+        3:   19:Service::~Service()
+        -:   20:= default;
+        -:   21:/*
+        -:   22:* Destructor that deletes the `_repository` pointer.
+        -:   23:*/
+        -:   24:
+function _ZN7Service9add_movieEPKcS1_jjS1_ called 13 returned 100% blocks executed 76%
+       13:   25:int Service::add_movie(const char title[], const char genre[], unsigned int year, unsigned int likes, const char trailer[])
+        -:   26:/*
+        -:   27:* Adds a movie to the repository with the given title, genre, year, likes, and trailer.
+        -:   28:*
+        -:   29:* parameters: title: The title of the movie, genre: Genre of the movie, year: The year of the release of the movie,
+        -:   30: *              likes: The number of likes, trailer: The link to the trailer of the movie
+        -:   31: *return: 1 if the movie was successfully added
+        -:   32: *          0 if the movie cannot be added (it already exists)
+        -:   33:*/
+        -:   34:{
+        -:   35:    // int size = -1;
+        -:   36:    // Movie* allMovies = get_all_movies(size);
+        -:   37:
+        -:   38:    /*for (int i = 0; i < size; i++)
+        -:   39:        if (strcmp(allMovies[i].get_title(), title) == 0)
+        -:   40:            return 0;*/
+        -:   41:
+       13:   42:    vector<TElem> allMoviesSTL = this->_repository->get_all_entities_STL();
+       13:   42-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   43:
+       58:   44:    for( auto movie : allMoviesSTL){
+       13:   44-block  0
+call    0 returned 13
+call    1 returned 13
+       46:   44-block  1
+call    2 returned 46
+       45:   44-block  2
+call    3 returned 45
+       58:   44-block  3
+call    4 returned 58
+branch  5 taken 46
+branch  6 taken 12 (fallthrough)
+       46:   45:        if (strcmp(movie.get_title(), title) == 0)
+call    0 returned 46
+branch  1 taken 46 (fallthrough)
+branch  2 taken 0 (throw)
+       46:   45-block  0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 45
+        1:   46:            return 0;
+        1:   46-block  0
+       46:   47:    }
+       45:   47-block  0
+       46:   47-block  1
+call    0 returned 46
+branch  1 taken 45 (fallthrough)
+branch  2 taken 1
+    $$$$$:   47-block  2
+call    3 never executed
+        -:   48:
+       12:   49:    Movie movieToAdd(title, genre, year, likes, trailer);
+       12:   49-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   50:
+       12:   51:    _repository->add_entity(movieToAdd);
+       12:   51-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   52:
+       12:   53:    return 1;
+       13:   54:}
+       12:   54-block  0
+call    0 returned 12
+       13:   54-block  1
+call    1 returned 13
+    $$$$$:   54-block  2
+call    2 never executed
+    $$$$$:   54-block  3
+call    3 never executed
+        -:   55:
+function _ZN7Service12delete_movieEPc called 2 returned 100% blocks executed 72%
+        2:   56:int Service::delete_movie(char title[])
+        -:   57:/*
+        -:   58:* Deletes the movie with the given title from the repository.
+        -:   59:*
+        -:   60:* parameters: title: The title of the movie to delete.
+        -:   61:* return: 1 if the movie was successfully deleted,
+        -:   62: *          0 if no movie with the given title was found.
+        -:   63:*/
+        -:   64:{
+        -:   65:    // int size = -1;
+        -:   66:    //Movie* allMovies = get_all_movies(size);
+        -:   67:
+        -:   68:    /*for (int i = 0; i < size; i++)
+        -:   69:    {
+        -:   70:        if (strcmp(allMovies[i].get_title(), title) != 0) continue;
+        -:   71:
+        -:   72:        _repository->delete_entity_at(i);
+        -:   73:
+        -:   74:        return 1;
+        -:   75:    }*/
+        -:   76:
+        2:   77:    vector<TElem> allMoviesSTL = this->_repository->get_all_entities_STL();
+        2:   77-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   78:    int index = -1;
+        -:   79:
+       2*:   80:    for (auto movie: allMoviesSTL)
+        2:   80-block  0
+call    0 returned 2
+call    1 returned 2
+        1:   80-block  1
+call    2 returned 1
+    %%%%%:   80-block  2
+call    3 never executed
+        2:   80-block  3
+call    4 returned 2
+branch  5 taken 1
+branch  6 taken 1 (fallthrough)
+        -:   81:    {
+        1:   82:        index++;
+       1*:   83:        if (strcmp(movie.get_title(), title) != 0) continue;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   83-block  1
+        -:   84:
+        1:   85:        _repository->delete_entity_at(index);
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   86:
+        1:   87:        return 1;
+        1:   87-block  0
+        1:   88:    }
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    $$$$$:   88-block  1
+call    3 never executed
+        -:   89:
+        1:   90:    return 0;
+        1:   90-block  0
+        2:   91:}
+        2:   91-block  0
+call    0 returned 2
+    $$$$$:   91-block  1
+call    1 never executed
+        -:   92:
+function _ZN7Service12update_movieEPcS0_S0_jjS0_ called 2 returned 100% blocks executed 73%
+        2:   93:int Service::update_movie(char title[], char newTitle[], char newGenre[], unsigned int newYear, unsigned int newLikes, char newTrailer[])
+        -:   94:/*
+        -:   95:* Updates the movie with the given title with new information.
+        -:   96:*
+        -:   97:* parameters: title: The title of the movie, newTitle: The updated movie title, newGenre: The updated genre of the movie,
+        -:   98:*              newYear: The updated year of the release of the movie, newLikes: The updated number of likes of the movie,
+        -:   99:*              newTrailer: The updated link to the movie trailer
+        -:  100:* return: 1 if the movie was successfully updated,
+        -:  101:*          0 if no movie with the given title was found.
+        -:  102:*/
+        -:  103:{
+        -:  104:    // int size = -1;
+        -:  105:    // Movie* allMovies = get_all_movies(size);
+        -:  106:
+        2:  107:    vector<TElem> allMoviesSTL = this->_repository->get_all_entities_STL();
+        2:  107-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  108:    int index = -1;
+        -:  109:
+        -:  110:    /*for (int i = 0; i < size; i++)
+        -:  111:    {
+        -:  112:        if (strcmp(allMovies[i].get_title(), title) != 0) continue;
+        -:  113:
+        -:  114:        Movie newMovie{ newTitle, newGenre, newYear, newLikes, newTrailer };
+        -:  115:
+        -:  116:        _repository->update_entity_at(i, newMovie);
+        -:  117:
+        -:  118:        return 1;
+        -:  119:    }*/
+        -:  120:
+        3:  121:    for (auto movie: allMoviesSTL)
+        2:  121-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  121-block  1
+call    2 returned 2
+        1:  121-block  2
+call    3 returned 1
+        3:  121-block  3
+call    4 returned 3
+branch  5 taken 2
+branch  6 taken 1 (fallthrough)
+        -:  122:    {
+        2:  123:        index++;
+        2:  124:        if (strcmp(movie.get_title(), title) != 0) continue;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  124-block  0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:  124-block  1
+        -:  125:
+        1:  126:        Movie newMovie{ newTitle, newGenre, newYear, newLikes, newTrailer};
+        1:  126-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  127:
+        1:  128:        _repository->update_entity_at(index, newMovie);
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  129:
+        1:  130:        return 1;
+        3:  131:    }
+        1:  131-block  0
+call    0 returned 1
+        2:  131-block  1
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+    $$$$$:  131-block  2
+call    4 never executed
+    $$$$$:  131-block  3
+call    5 never executed
+        -:  132:
+        1:  133:    return 0;
+        1:  133-block  0
+        2:  134:}
+        2:  134-block  0
+call    0 returned 2
+    $$$$$:  134-block  1
+call    1 never executed
+        -:  135:
+function _ZN7Service14get_all_moviesERi called 1 returned 100% blocks executed 100%
+        1:  136:Movie* Service::get_all_movies(int& size)
+        -:  137:/*
+        -:  138:* Returns an array of all the movies in the repository.
+        -:  139:*
+        -:  140:* parameters: size: A reference to an integer that will be set to the size of the returned array.
+        -:  141:* return: A pointer to an array of Movie objects containing all the movies in the repository.
+        -:  142:*/
+        -:  143:{
+        1:  144:    size = _repository->get_size();
+        1:  144-block  0
+call    0 returned 1
+        1:  145:    return _repository->get_all_entities();
+call    0 returned 1
+        -:  146:}
+        -:  147:
+function _ZN7Service24get_all_movies_of_genresEPcRi called 1 returned 100% blocks executed 83%
+        1:  148:Movie* Service::get_all_movies_of_genres(char genre[], int &size)
+        -:  149:/*
+        -:  150: * Returns an array of all the movies in the repository of a given genre.
+        -:  151: *
+        -:  152: * parameters: genre: The genre of the movie, size: A reference to an integer that will be set to the size of the returned array.
+        -:  153: * return: The array of all movies of a given genre.
+        -:  154: */
+        -:  155:{
+        1:  156:    int initialSize = _repository->get_size();
+        1:  156-block  0
+call    0 returned 1
+        1:  157:    Movie* allMovies = _repository->get_all_entities();
+call    0 returned 1
+        -:  158:
+        1:  159:    size = 0;
+        -:  160:
+        2:  161:    for (int i = 0; i < initialSize; i++)
+        1:  161-block  0
+        2:  161-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+       1*:  162:        if (strcmp(allMovies[i].get_genre(), genre) == 0 || strcmp("", genre) == 0)
+        1:  162-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  162-block  1
+branch  3 never executed
+branch  4 never executed
+        1:  162-block  2
+    %%%%%:  162-block  3
+        1:  162-block  4
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        1:  163:            size++;
+        1:  163-block  0
+        -:  164:
+        1:  165:    auto* allMoviesOfGenre = (Movie*)(malloc(size * sizeof(Movie)));
+        -:  166:
+        1:  167:    int currentIndex = 0;
+        -:  168:
+        2:  169:    for (int i = 0; i < initialSize; i++)
+        1:  169-block  0
+        1:  169-block  1
+        2:  169-block  2
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        -:  170:    {
+       1*:  171:        if (strcmp(allMovies[i].get_genre(), genre) == 0 || strcmp("", genre) == 0)
+        1:  171-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  171-block  1
+branch  3 never executed
+branch  4 never executed
+        1:  171-block  2
+    %%%%%:  171-block  3
+        1:  171-block  4
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        1:  172:            allMoviesOfGenre[currentIndex++] = allMovies[i];
+        1:  172-block  0
+        -:  173:    }
+        -:  174:
+        1:  175:    return allMoviesOfGenre;
+        1:  175-block  0
+        -:  176:}

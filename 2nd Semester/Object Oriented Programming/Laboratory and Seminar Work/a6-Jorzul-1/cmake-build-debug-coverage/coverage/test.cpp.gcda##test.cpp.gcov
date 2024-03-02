@@ -1,0 +1,421 @@
+        -:    0:Source:C:/Users/User/OneDrive/Documents/GitHub/a6-Jorzul-1/Tests/test.cpp
+        -:    0:Graph:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Tests\test.cpp.gcno
+        -:    0:Data:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Tests\test.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by User on 5/4/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "test.h"
+        -:    6:#include "../Domain/Movie.h"
+        -:    7:#include "../Repository/Repository.h"
+        -:    8:#include "../Service/Service.h"
+        -:    9:#include <cassert>
+        -:   10:
+function _Z11Test_Domainv called 1 returned 100% blocks executed 60%
+        1:   11:void Test_Domain()
+        -:   12:{
+        1:   13:    char title[50] = "Titanic";
+        1:   14:    char genre[50] = "Drama";
+        1:   15:    int year = 2016;
+        1:   16:    int likes = 1000;
+        1:   17:    char trailer[100] = "www.youtube.com";
+        -:   18:
+        1:   19:    Movie movie(title, genre, year, likes, trailer);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:
+        1:   21:    Movie movie1;
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   22:
+       1*:   23:    assert(strcmp(movie.get_title(), "Titanic") == 0);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   23-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   23-block  3
+    %%%%%:   23-block  4
+       1*:   24:    assert(strcmp(movie.get_genre(), "Drama") == 0);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   24-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   24-block  3
+    %%%%%:   24-block  4
+       1*:   25:    assert(movie.get_likes() == 1000);
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   25-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   25-block  3
+    %%%%%:   25-block  4
+       1*:   26:    assert(movie.get_year() == 2016);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   26-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   26-block  3
+    %%%%%:   26-block  4
+       1*:   27:    assert(strcmp(movie.get_trailer(), "www.youtube.com") == 0);
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   27-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   27-block  3
+    %%%%%:   27-block  4
+        1:   28:}
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   28-block  1
+call    2 never executed
+    $$$$$:   28-block  2
+call    3 never executed
+        -:   29:
+function _Z15Test_Repositoryv called 1 returned 100% blocks executed 64%
+        1:   30:void Test_Repository()
+        -:   31:{
+        1:   32:    Repository movie_repo;
+        1:   32-block  0
+call    0 returned 1
+       1*:   33:    assert(movie_repo.get_size() == 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   33-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   33-block  2
+    %%%%%:   33-block  3
+        -:   34:
+        1:   35:    char title[50] = "Titanic";
+        1:   36:    char genre[50] = "Drama";
+        1:   37:    int year = 2016;
+        1:   38:    int likes = 1000;
+        1:   39:    char trailer[100] = "www.youtube.com";
+        -:   40:
+        1:   41:    Movie movie(title, genre, year, likes, trailer);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   42:
+        1:   43:    movie_repo.add_entity(movie);
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   44:    assert(movie_repo.get_size() == 1);
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   44-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   44-block  3
+    %%%%%:   44-block  4
+        -:   45:
+        1:   46:    movie_repo.delete_entity_at(0);
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   47:    assert(movie_repo.get_size() == 0);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   47-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   47-block  3
+    %%%%%:   47-block  4
+        -:   48:
+        1:   49:    char title2[50] = "Titanic";
+        1:   50:    Movie movie1(title2, genre, year, likes, trailer);
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51:    movie_repo.add_entity(movie);
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   52:
+        1:   53:    movie_repo.update_entity_at(0, movie1);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   54:    assert(movie_repo.get_all_entities()[0].get_likes() == likes);
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   54-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   54-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+        1:   54-block  4
+    %%%%%:   54-block  5
+        1:   55:}
+        1:   55-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   55-block  1
+call    3 never executed
+    $$$$$:   55-block  2
+call    4 never executed
+    $$$$$:   55-block  3
+call    5 never executed
+        -:   56:
+function _Z12Test_Servicev called 1 returned 100% blocks executed 61%
+        1:   57:void Test_Service()
+        -:   58:{
+        1:   59:    Repository movie_repo;
+        1:   59-block  0
+call    0 returned 1
+        1:   60:    Service movie_service(movie_repo);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   61:
+        1:   62:    char title[50] = "Titanic";
+        1:   63:    char genre[50] = "Drama";
+        1:   64:    int year = 2016;
+        1:   65:    int likes = 1000;
+        1:   66:    char trailer[100] = "www.youtube.com";
+        -:   67:
+       1*:   68:    assert(movie_service.add_movie(title, genre, year, likes, trailer) == 1);
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   68-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   68-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   68-block  3
+    %%%%%:   68-block  4
+       1*:   69:    assert(movie_service.add_movie(title, genre, year, likes, trailer) == 0);
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   69-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   69-block  3
+    %%%%%:   69-block  4
+        -:   70:
+       1*:   71:    assert(movie_service.delete_movie(title) == 1);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   71-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   71-block  3
+    %%%%%:   71-block  4
+       1*:   72:    assert(movie_service.delete_movie(title) == 0);
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   72-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   72-block  3
+    %%%%%:   72-block  4
+        -:   73:
+       1*:   74:    assert(movie_service.add_movie(title, genre, year, likes, trailer) == 1);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   74-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   74-block  3
+    %%%%%:   74-block  4
+        1:   75:    char title2[50] = "Titanic 2";
+       1*:   76:    assert(movie_service.update_movie(title, title2, genre, year, likes, trailer) == 1);
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   76-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   76-block  3
+    %%%%%:   76-block  4
+       1*:   77:    assert(movie_service.update_movie(title, title2, genre, year, likes, trailer) == 0);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   77-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   77-block  3
+    %%%%%:   77-block  4
+        -:   78:
+        1:   79:    int size = -1;
+       1*:   80:    assert(movie_service.get_all_movies(size)[0].get_likes() == likes);
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   80-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   80-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+        1:   80-block  4
+    %%%%%:   80-block  5
+       1*:   81:    assert(size == 1);
+        1:   81-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   81-block  1
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+        1:   81-block  2
+    %%%%%:   81-block  3
+        -:   82:
+       1*:   83:    assert(movie_service.get_all_movies_of_genres(genre, size)[0].get_likes() == likes);
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   83-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   83-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+        1:   83-block  4
+    %%%%%:   83-block  5
+        -:   84:    
+        1:   85:}
+        1:   85-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   85-block  1
+call    2 never executed
+    $$$$$:   85-block  2
+call    3 never executed
+        -:   86:
+function _Z7TestAllv called 1 returned 100% blocks executed 100%
+        1:   87:void TestAll()
+        -:   88:{
+        1:   89:    Test_Domain();
+        1:   89-block  0
+call    0 returned 1
+        1:   90:    Test_Repository();
+call    0 returned 1
+        1:   91:    Test_Service();
+call    0 returned 1
+        1:   92:}

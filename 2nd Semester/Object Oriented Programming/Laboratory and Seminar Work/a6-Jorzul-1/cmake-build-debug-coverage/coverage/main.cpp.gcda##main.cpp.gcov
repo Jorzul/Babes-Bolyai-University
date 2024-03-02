@@ -1,0 +1,74 @@
+        -:    0:Source:C:/Users/User/OneDrive/Documents/GitHub/a6-Jorzul-1/main.cpp
+        -:    0:Graph:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by User on 5/4/2023.
+        -:    3://
+        -:    4:#include <crtdbg.h>
+        -:    5:#include "ui/ui.h"
+        -:    6:#include "Tests/test.h"
+        -:    7:
+function main called 1 returned 100% blocks executed 62%
+        1:    8:int main()
+        -:    9:{
+        1:   10:    TestAll();
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:
+        1:   12:    Repository movieRepository;
+        1:   12-block  0
+call    0 returned 1
+        -:   13:
+        1:   14:    Repository watchListRepository;
+call    0 returned 1
+        -:   15:
+        1:   16:    Service movieService{ movieRepository };
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   17:
+        1:   18:    Service watchListService{ watchListRepository };
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:
+        1:   20:    Console console{ movieService, watchListService };
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:
+        1:   22:    console.menu();
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   23:
+        1:   24:    printf("Memory Leaks : %d", _CrtDumpMemoryLeaks());
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   25:
+        1:   26:    return 0;
+        1:   27:}
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:   27-block  1
+call    5 never executed
+    $$$$$:   27-block  2
+call    6 never executed
+    $$$$$:   27-block  3
+call    7 never executed
+    $$$$$:   27-block  4
+call    8 never executed
+    $$$$$:   27-block  5
+call    9 never executed

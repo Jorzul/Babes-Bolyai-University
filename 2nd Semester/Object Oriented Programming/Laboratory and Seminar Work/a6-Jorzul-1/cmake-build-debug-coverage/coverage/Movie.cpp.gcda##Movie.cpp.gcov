@@ -1,0 +1,105 @@
+        -:    0:Source:C:/Users/User/OneDrive/Documents/GitHub/a6-Jorzul-1/Domain/Movie.cpp
+        -:    0:Graph:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Domain\Movie.cpp.gcno
+        -:    0:Data:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Domain\Movie.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by User on 5/4/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Movie.h"
+        -:    6:
+function _ZN5MovieC2Ev called 1 returned 100% blocks executed 100%
+        1:    7:Movie::Movie()
+        -:    8:/*
+        -:    9:* Default constructor that initializes a movie with empty strings and zero values for the year and likes.
+        -:   10:*/
+        -:   11:{
+        1:   12:    strcpy(_title, "");
+        1:   13:    strcpy(_genre, "");
+        1:   14:    _year = 0;
+        1:   15:    _likes = 0;
+        1:   16:    strcpy(_trailer, "");
+        1:   17:}
+        -:   18:
+function _ZN5MovieC2EPKcS1_jjS1_ called 16 returned 100% blocks executed 100%
+       16:   19:Movie::Movie(const char title[], const char genre[], unsigned int year, unsigned int likes, const char trailer[])
+        -:   20:/*
+        -:   21:* Constructor that initializes a movie with the given parameters.
+        -:   22:*
+        -:   23:* parameters: title: The title of the movie, genre: The genre of the movie, year: The year of the release of the movie,
+        -:   24:*              likes: The number of likes of the movie, trailer: The link to the movie trailer.
+        -:   25:*/
+        -:   26:{
+       16:   27:    strcpy(_title, title);
+       16:   28:    strcpy(_genre, genre);
+       16:   29:    _year = year;
+       16:   30:    _likes = likes;
+       16:   31:    strcpy(_trailer, trailer);
+       16:   32:}
+        -:   33:
+function _ZN5Movie9get_titleEv called 50 returned 100% blocks executed 100%
+       50:   34:char* Movie::get_title()
+        -:   35:/*
+        -:   36:* Returns a pointer to the title of the movie.
+        -:   37:*
+        -:   38:* return: A pointer to the title of the movie.
+        -:   39:*/
+        -:   40:{
+       50:   41:    return _title;
+       50:   41-block  0
+        -:   42:}
+        -:   43:
+function _ZN5Movie9get_genreEv called 3 returned 100% blocks executed 100%
+        3:   44:char* Movie::get_genre()
+        -:   45:/*
+        -:   46:* Returns a pointer to the genre of the movie.
+        -:   47:*
+        -:   48:* return: A pointer to the genre of the movie.
+        -:   49:*/
+        -:   50:{
+        3:   51:    return _genre;
+        3:   51-block  0
+        -:   52:}
+        -:   53:
+function _ZNK5Movie8get_yearEv called 1 returned 100% blocks executed 100%
+        1:   54:unsigned int Movie::get_year() const
+        -:   55:/*
+        -:   56:* Returns the year the movie was released.
+        -:   57:*
+        -:   58:* return: An unsigned integer representing the year the movie was released.
+        -:   59:*/
+        -:   60:{
+        1:   61:    return _year;
+        1:   61-block  0
+        -:   62:}
+        -:   63:
+function _ZNK5Movie9get_likesEv called 4 returned 100% blocks executed 100%
+        4:   64:unsigned int Movie::get_likes() const
+        -:   65:/*
+        -:   66:* Returns the number of likes the movie has.
+        -:   67:*
+        -:   68:* return: An unsigned integer representing the number of likes the movie has.
+        -:   69:*/
+        -:   70:{
+        4:   71:    return _likes;
+        4:   71-block  0
+        -:   72:}
+        -:   73:
+function _ZN5Movie11get_trailerEv called 1 returned 100% blocks executed 100%
+        1:   74:char* Movie::get_trailer()
+        -:   75:/*
+        -:   76:* Returns a pointer to the URL of the movie's trailer.
+        -:   77:*
+        -:   78:* @return A pointer to the URL of the movie's trailer.
+        -:   79:*/
+        -:   80:{
+        1:   81:    return _trailer;
+        1:   81-block  0
+        -:   82:}
+        -:   83:
+function _ZN5MovieD2Ev called 144 returned 100% blocks executed 100%
+      144:   84:Movie::~Movie()
+        -:   85:= default;
+        -:   86:/*
+        -:   87:* Destructor that cleans up any dynamically allocated memory.
+        -:   88:*/

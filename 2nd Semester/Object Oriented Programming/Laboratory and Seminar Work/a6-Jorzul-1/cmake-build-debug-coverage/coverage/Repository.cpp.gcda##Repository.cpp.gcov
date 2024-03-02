@@ -1,0 +1,98 @@
+        -:    0:Source:C:/Users/User/OneDrive/Documents/GitHub/a6-Jorzul-1/Repository/Repository.cpp
+        -:    0:Graph:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Repository\Repository.cpp.gcno
+        -:    0:Data:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\Repository\Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by User on 5/4/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Repository.h"
+        -:    6:
+function _ZN10RepositoryD2Ev called 4 returned 100% blocks executed 100%
+        4:    7:Repository::~Repository()
+        4:    7-block  0
+call    0 returned 4
+        -:    8:= default;
+        -:    9:/*
+        -:   10:* Destructor that cleans up any dynamically allocated memory.
+        -:   11:*/
+        -:   12:
+function _ZN10Repository10add_entityERK5Movie called 14 returned 100% blocks executed 100%
+       14:   13:void Repository::add_entity(const TElem& entity)
+        -:   14:/*
+        -:   15:* Adds the given entity to the repository.
+        -:   16:*
+        -:   17:* parameters: entity: The entity to add.
+        -:   18:*/
+        -:   19:{
+       14:   20:    entities.push_back(entity);
+       14:   20-block  0
+call    0 returned 14
+       14:   21:}
+        -:   22:
+function _ZN10Repository16delete_entity_atEi called 2 returned 100% blocks executed 75%
+        2:   23:void Repository::delete_entity_at(int index)
+        -:   24:/*
+        -:   25:* Deletes the entity at the given index from the repository.
+        -:   26:*
+        -:   27:* parameters: index: The index of the entity to delete.
+        -:   28:*/
+        -:   29:{
+        2:   30:    entities.erase(entities.begin() + index);
+        2:   30-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   30-block  1
+    $$$$$:   30-block  2
+        2:   31:}
+        2:   31-block  0
+        -:   32:
+function _ZN10Repository16update_entity_atEiRK5Movie called 2 returned 100% blocks executed 100%
+        2:   33:void Repository::update_entity_at(int index, const TElem& newEntity)
+        -:   34:/*
+        -:   35:* Updates the entity at the given index with the given new entity.
+        -:   36:*
+        -:   37:* parameters: index: The index of the entity to update, newEntity: The new entity to replace the old one with.
+        -:   38:*/
+        -:   39:{
+        2:   40:    entities[index] = newEntity;
+        2:   40-block  0
+call    0 returned 2
+        2:   41:}
+        -:   42:
+function _ZN10Repository16get_all_entitiesEv called 3 returned 100% blocks executed 100%
+        3:   43:TElem* Repository::get_all_entities()
+        -:   44:/*
+        -:   45:* Returns a pointer to an array containing all the entities in the repository.
+        -:   46:*
+        -:   47:* return: A pointer to an array of TElem objects containing all the entities in the repository.
+        -:   48:*/
+        -:   49:{
+        3:   50:    return entities.data();
+        3:   50-block  0
+call    0 returned 3
+        -:   51:}
+        -:   52:
+function _ZN10Repository20get_all_entities_STLEv called 17 returned 100% blocks executed 100%
+       17:   53:vector<TElem> Repository::get_all_entities_STL(){
+       17:   54:    return entities;
+       17:   54-block  0
+call    0 returned 17
+        -:   55:}
+        -:   56:
+function _ZN10Repository8get_sizeEv called 5 returned 100% blocks executed 100%
+        5:   57:int Repository::get_size()
+        -:   58:/*
+        -:   59:* Returns the number of entities in the repository.
+        -:   60:*
+        -:   61:* return: An integer representing the number of entities in the repository.
+        -:   62:*/
+        -:   63:{
+        5:   64:    return entities.size();
+        5:   64-block  0
+call    0 returned 5
+        -:   65:}

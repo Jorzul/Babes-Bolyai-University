@@ -1,0 +1,1557 @@
+        -:    0:Source:C:/Users/User/OneDrive/Documents/GitHub/a6-Jorzul-1/ui/ui.cpp
+        -:    0:Graph:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\ui\ui.cpp.gcno
+        -:    0:Data:C:\Users\User\OneDrive\Documents\GitHub\a6-Jorzul-1\cmake-build-debug-coverage\CMakeFiles\a6_Jorzul_1.dir\ui\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by User on 5/4/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "ui.h"
+        -:    6:
+        -:    7:#include<cstdio>
+        -:    8:#include<cstring>
+        -:    9:#include <windows.h>
+        -:   10:#include <shellapi.h>
+        -:   11:
+function _ZN7ConsoleC2ER7ServiceS1_ called 1 returned 100% blocks executed 100%
+        1:   12:Console::Console(Service &movieService, Service& watchListService)
+        -:   13:/*
+        -:   14:* Constructor that takes a reference to a service and sets the `_service` pointer.
+        -:   15:*
+        -:   16:* parameters: movieService, watchListService: The services used for managing movies.
+        -:   17:*/
+        -:   18:{
+        1:   19:    _movieService = &movieService;
+        1:   20:    _watchListService = &watchListService;
+        1:   21:}
+        -:   22:
+function _ZN7ConsoleD2Ev called 1 returned 100% blocks executed 100%
+        1:   23:Console::~Console()
+        -:   24:= default;
+        -:   25:/*
+        -:   26:* Destructor that deletes the `_service` pointer.
+        -:   27:*/
+        -:   28:
+function _ZL13validate_yeari called 0 returned 0% blocks executed 0%
+    #####:   29:static bool validate_year(int year)
+        -:   30:{
+    #####:   31:    if (year < 0)
+    %%%%%:   31-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   32:        return false;
+    %%%%%:   32-block  0
+    #####:   33:    return true;
+    %%%%%:   33-block  0
+        -:   34:}
+        -:   35:
+function _ZL14validate_likesi called 0 returned 0% blocks executed 0%
+    #####:   36:static bool validate_likes(int likes)
+        -:   37:{
+    #####:   38:    if (likes < 0)
+    %%%%%:   38-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   39:        return false;
+    %%%%%:   39-block  0
+    #####:   40:    return true;
+    %%%%%:   40-block  0
+        -:   41:}
+        -:   42:
+function _ZL21remove_last_characterPc called 0 returned 0% blocks executed 0%
+    #####:   43:static void remove_last_character(char* str)
+        -:   44:{
+        -:   45:    // Only removing the last character if there is at least one character and it is '\n'.
+    #####:   46:    if (strlen(str) > 0 && str[strlen(str) - 1] == '\n')
+    %%%%%:   46-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   46-block  1
+branch  2 never executed
+branch  3 never executed
+    #####:   47:        str[strlen(str) - 1] = '\0';
+    %%%%%:   47-block  0
+    #####:   48:}
+        -:   49:
+        -:   50:
+function _ZN7Console20add_10_random_moviesEv called 1 returned 100% blocks executed 100%
+        1:   51:void Console::add_10_random_movies()
+        -:   52:/*
+        -:   53:* Adds ten movies to the service by calling the service's `add_movie()` function ten times.
+        -:   54:*/
+        -:   55:{
+        1:   56:    _movieService->add_movie("Movie of the year", "Adventure", 2020, 200000,
+        1:   56-block  0
+call    0 returned 1
+        -:   57:                             "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   58:    _movieService->add_movie("Titanic", "Drama", 2008, 650000,
+call    0 returned 1
+        -:   59:                             "https://www.youtube.com/watch?v=kVrqfYjkTdQ");
+        1:   60:    _movieService->add_movie("Marvel's Avengers", "Action", 2002, 95000,
+call    0 returned 1
+        -:   61:                             "https://www.youtube.com/watch?v=eOrNdBpGMv8");
+        1:   62:    _movieService->add_movie("Home Alone", "Comedy", 2004, 500000,
+call    0 returned 1
+        -:   63:                             "https://www.youtube.com/watch?v=Fmih-zWIjGY");
+        1:   64:    _movieService->add_movie("Justitiarul de Berceni", "Action", 2023, 65000,
+call    0 returned 1
+        -:   65:                             "https://www.youtube.com/watch?v=Q7cJ5_JZjuk");
+        1:   66:    _movieService->add_movie("Shrek movie", "Adventure", 2001, 150000,
+call    0 returned 1
+        -:   67:                             "https://www.youtube.com/watch?v=ooJJX3R42WM");
+        1:   68:    _movieService->add_movie("Avatar the last airbender", "Adventure", 2020, 100000,
+call    0 returned 1
+        -:   69:                             "https://www.youtube.com/watch?v=IphpIUm_F7E");
+        1:   70:    _movieService->add_movie("The Amazing Ian", "Adventure", 2010, 65100,
+call    0 returned 1
+        -:   71:                             "https://www.youtube.com/watch?v=-eo3_509Wmc");
+        1:   72:    _movieService->add_movie("Fast and Furious", "Racing", 2012, 690000,
+call    0 returned 1
+        -:   73:                             "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   74:    _movieService->add_movie("Pixels", "SF", 2015, 150500,
+call    0 returned 1
+        -:   75:                             "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   76:}
+        -:   77:
+function _ZN7Console12add_movie_uiEv called 0 returned 0% blocks executed 0%
+    #####:   78:void Console::add_movie_ui()
+        -:   79:/*
+        -:   80:* Prompts the user to enter information for a new movie, and adds it to the service by calling the service's `add_movie()` function.
+        -:   81:*/
+        -:   82:{
+        -:   83:    char title[101];
+        -:   84:    char genre[101];
+        -:   85:    int year;
+        -:   86:    int likes;
+        -:   87:    char trailer[101];
+        -:   88:
+    #####:   89:    printf("Title : ");
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   90:    fgets(title, 100, stdin);
+    %%%%%:   90-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   90-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   91:
+    #####:   92:    remove_last_character(title);
+    %%%%%:   92-block  0
+call    0 never executed
+        -:   93:
+    #####:   94:    printf("Genre : ");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   95:    fgets(genre, 100, stdin);
+    %%%%%:   95-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   95-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   96:
+    #####:   97:    remove_last_character(genre);
+    %%%%%:   97-block  0
+call    0 never executed
+        -:   98:
+        -:   99:
+    #####:  100:    printf("Year : ");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  101:    int yearReadStatus = scanf("%d", &year);
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  102:
+        -:  103:    int c;
+    #####:  104:    while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  104-block  0
+    %%%%%:  104-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  104-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  104-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  104-block  4
+    %%%%%:  104-block  5
+    %%%%%:  104-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  105:
+    #####:  106:    if (yearReadStatus != 1)
+    %%%%%:  106-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  107:    {
+    #####:  108:        printf("The year should be an unsigned integer number.");
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  109:        return;
+    %%%%%:  109-block  0
+    %%%%%:  109-block  1
+        -:  110:    }
+        -:  111:
+    #####:  112:    if (!validate_year(year))
+    %%%%%:  112-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  113:    {
+    #####:  114:        printf("The year cannot be a negative number.");
+    %%%%%:  114-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  115:        return;
+    %%%%%:  115-block  0
+        -:  116:    }
+        -:  117:
+    #####:  118:    printf("Likes : ");
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  119:    int likesReadStatus = scanf("%d", &likes);
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  120:
+        -:  121:
+    #####:  122:    while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  122-block  0
+    %%%%%:  122-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  122-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  122-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  122-block  4
+    %%%%%:  122-block  5
+    %%%%%:  122-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  123:
+    #####:  124:    if (likesReadStatus != 1)
+    %%%%%:  124-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  125:    {
+    #####:  126:        printf("The likes should be an unsigned integer number.");
+    %%%%%:  126-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  127:        return;
+    %%%%%:  127-block  0
+        -:  128:    }
+        -:  129:
+    #####:  130:    if (!validate_likes(likes))
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  131:    {
+    #####:  132:        printf("The number of likes cannot be negative.");
+    %%%%%:  132-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  133:        return;
+    %%%%%:  133-block  0
+        -:  134:    }
+        -:  135:
+        -:  136:
+    #####:  137:    printf("Trailer : ");
+    %%%%%:  137-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  138:    fgets(trailer, 100, stdin);
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  138-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  139:
+    #####:  140:    remove_last_character(trailer);
+    %%%%%:  140-block  0
+call    0 never executed
+        -:  141:
+    #####:  142:    if (_movieService->add_movie(title, genre, year, likes, trailer) == 1)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  142-block  0
+branch  3 never executed
+branch  4 never executed
+    #####:  143:        printf("Movie added.\n");
+    %%%%%:  143-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  144:    else printf("There is another movie with the same title.\n");
+    %%%%%:  144-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  145:}
+        -:  146:
+function _ZN7Console15delete_movie_uiEv called 0 returned 0% blocks executed 0%
+    #####:  147:void Console::delete_movie_ui()
+        -:  148:/*
+        -:  149:* Prompts the user to enter the ID of the movie they want to delete, and deletes it from the service by calling
+        -:  150: * the service's `delete_movie()` function.
+        -:  151:*/
+        -:  152:{
+        -:  153:    char title[101];
+        -:  154:
+    #####:  155:    printf("Title : ");
+    %%%%%:  155-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  156:    fgets(title, 100, stdin);
+    %%%%%:  156-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  156-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  157:
+    #####:  158:    remove_last_character(title);
+    %%%%%:  158-block  0
+call    0 never executed
+        -:  159:
+    #####:  160:    if (_movieService->delete_movie(title) == 1)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  160-block  0
+branch  3 never executed
+branch  4 never executed
+    #####:  161:        printf("Movie deleted.\n");
+    %%%%%:  161-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  162:    else printf("There is no movie with the given title.\n");
+    %%%%%:  162-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  163:}
+    %%%%%:  163-block  0
+        -:  164:
+function _ZN7Console15update_movie_uiEv called 0 returned 0% blocks executed 0%
+    #####:  165:void Console::update_movie_ui()
+        -:  166:/*
+        -:  167:* Prompts the user to enter the ID of the movie they want to update, and then prompts them to enter updated
+        -:  168: * information for the movie. The updated movie is then passed to the service's `update_movie()` function.
+        -:  169:*/
+        -:  170:{
+        -:  171:    char oldTitle[101];
+        -:  172:    char newTitle[101];
+        -:  173:    char newGenre[101];
+        -:  174:    int newYear;
+        -:  175:    int newLikes;
+        -:  176:    char newTrailer[101];
+        -:  177:
+    #####:  178:    printf("Old Title : ");
+    %%%%%:  178-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  179:    fgets(oldTitle, 100, stdin);
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  179-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  180:
+    #####:  181:    remove_last_character(oldTitle);
+    %%%%%:  181-block  0
+call    0 never executed
+        -:  182:
+    #####:  183:    printf("New Title : ");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  184:    fgets(newTitle, 100, stdin);
+    %%%%%:  184-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  184-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  185:
+    #####:  186:    remove_last_character(newTitle);
+    %%%%%:  186-block  0
+call    0 never executed
+        -:  187:
+    #####:  188:    printf("New Genre : ");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  189:    fgets(newGenre, 100, stdin);
+    %%%%%:  189-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  189-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  190:
+    #####:  191:    remove_last_character(newGenre);
+    %%%%%:  191-block  0
+call    0 never executed
+        -:  192:
+        -:  193:
+    #####:  194:    printf("New Year : ");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  195:    int yearReadStatus = scanf("%d", &newYear);
+    %%%%%:  195-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  196:
+        -:  197:    int c;
+    #####:  198:    while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  198-block  0
+    %%%%%:  198-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  198-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  198-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  198-block  4
+    %%%%%:  198-block  5
+    %%%%%:  198-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  199:
+    #####:  200:    if (yearReadStatus != 1)
+    %%%%%:  200-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  201:    {
+    #####:  202:        printf("The year should be an unsigned integer number.");
+    %%%%%:  202-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  203:        return;
+    %%%%%:  203-block  0
+    %%%%%:  203-block  1
+        -:  204:    }
+        -:  205:
+    #####:  206:    if (!validate_year(newYear))
+    %%%%%:  206-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  207:    {
+    #####:  208:        printf("The year cannot be a negative number.");
+    %%%%%:  208-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  209:        return;
+    %%%%%:  209-block  0
+        -:  210:    }
+        -:  211:
+    #####:  212:    printf("New Likes : ");
+    %%%%%:  212-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  213:    int likesReadStatus = scanf("%d", &newLikes);
+    %%%%%:  213-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  214:
+    #####:  215:    while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  215-block  0
+    %%%%%:  215-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  215-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  215-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  215-block  4
+    %%%%%:  215-block  5
+    %%%%%:  215-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  216:
+    #####:  217:    if (likesReadStatus != 1)
+    %%%%%:  217-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  218:    {
+    #####:  219:        printf("The likes should be an unsigned integer number.");
+    %%%%%:  219-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  220:        return;
+    %%%%%:  220-block  0
+        -:  221:    }
+        -:  222:
+    #####:  223:    if (!validate_likes(newLikes))
+    %%%%%:  223-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  224:    {
+    #####:  225:        printf("The number of likes cannot be negative.");
+    %%%%%:  225-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  226:        return;
+    %%%%%:  226-block  0
+        -:  227:    }
+        -:  228:
+    #####:  229:    printf("New Trailer : ");
+    %%%%%:  229-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  230:    fgets(newTrailer, 100, stdin);
+    %%%%%:  230-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  230-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  231:
+    #####:  232:    remove_last_character(newTrailer);
+    %%%%%:  232-block  0
+call    0 never executed
+        -:  233:
+    #####:  234:    if (_movieService->update_movie(oldTitle, newTitle, newGenre, newYear, newLikes, newTrailer) == 1)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  234-block  0
+branch  3 never executed
+branch  4 never executed
+    #####:  235:        printf("Movie updated.\n");
+    %%%%%:  235-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  236:    else printf("There is no movie with the given old title. Operation canceled.\n");
+    %%%%%:  236-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  237:}
+        -:  238:
+function _ZN7Console21display_all_movies_uiEv called 0 returned 0% blocks executed 0%
+    #####:  239:void Console::display_all_movies_ui()
+        -:  240:/*
+        -:  241:* Displays all the movies in the service by calling the service's `get_all_movies()` function and printing the results to the console.
+        -:  242:*/
+        -:  243:{
+    #####:  244:    printf("Displaying all the movies :\n");
+    %%%%%:  244-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  245:
+    #####:  246:    int size = -1;
+    #####:  247:    Movie* allMovies = _movieService->get_all_movies(size);
+    %%%%%:  247-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  248:
+    #####:  249:    if (size == 0)
+    %%%%%:  249-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  250:    {
+    #####:  251:        printf("No movies yet.\n");
+    %%%%%:  251-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  252:
+    #####:  253:        return;
+    %%%%%:  253-block  0
+        -:  254:    }
+        -:  255:
+    #####:  256:    for (int i = 0; i < size; i++)
+    %%%%%:  256-block  0
+    %%%%%:  256-block  1
+    %%%%%:  256-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:  257:        printf("%d. Title: %s | Genre: %s | Year: %u | Likes: %u | Trailer: %s\n",
+    %%%%%:  257-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  258:               (i+1), allMovies[i].get_title(), allMovies[i].get_genre(), allMovies[i].get_year(),
+    %%%%%:  258-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  258-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  258-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  259:               allMovies[i].get_likes(), allMovies[i].get_trailer());
+    %%%%%:  259-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  259-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  260:}
+        -:  261:
+function _ZN7Console30display_all_movies_of_genre_uiEv called 0 returned 0% blocks executed 0%
+    #####:  262:void Console::display_all_movies_of_genre_ui()
+        -:  263:/*
+        -:  264:* Displays all the movies in the service by calling the service's `get_all_movies()` function and printing the results to the console.
+        -:  265:*/
+        -:  266:{
+    #####:  267:    printf("Displaying all the movies :\n");
+    %%%%%:  267-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  268:
+        -:  269:    char genre[101];
+        -:  270:
+    #####:  271:    printf("Genre : ");
+    %%%%%:  271-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  272:    fgets(genre, 100, stdin);
+    %%%%%:  272-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  272-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  273:
+    #####:  274:    remove_last_character(genre);
+    %%%%%:  274-block  0
+call    0 never executed
+        -:  275:
+    #####:  276:    int size = -1;
+    #####:  277:    Movie* allMovies = _movieService->get_all_movies_of_genres(genre, size);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  278:
+    #####:  279:    if (size == 0)
+    %%%%%:  279-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  280:    {
+    #####:  281:        printf("No movies yet.\n");
+    %%%%%:  281-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  282:        free(allMovies);
+        -:  283:
+    #####:  284:        return;
+    %%%%%:  284-block  0
+        -:  285:    }
+        -:  286:
+    #####:  287:    int current_movie_int = 0;
+    #####:  288:    bool continue_watching = true;
+        -:  289:
+        -:  290:    char c;
+    #####:  291:    while (continue_watching)
+    %%%%%:  291-block  0
+    %%%%%:  291-block  1
+branch  0 never executed
+branch  1 never executed
+        -:  292:    {
+    #####:  293:        printf("%d. Title: %s ; Genre : %s ; Year : %u ; Likes : %u\n",
+    %%%%%:  293-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  294:               (current_movie_int + 1), allMovies[current_movie_int].get_title(), allMovies[current_movie_int].get_genre(),
+    %%%%%:  294-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  294-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  295:               allMovies[current_movie_int].get_year(), allMovies[current_movie_int].get_likes());
+    %%%%%:  295-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  295-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  296:
+        -:  297:        // Opening the trailer in the browser.
+    #####:  298:        ShellExecuteA(nullptr, "open", allMovies[current_movie_int].get_trailer(), nullptr, nullptr, SW_SHOWNORMAL);
+    %%%%%:  298-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  298-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  299:
+    #####:  300:        printf("Do you want to add the movie to the watch list? (y/n)");
+    %%%%%:  300-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  301:        while (true)
+        -:  302:        {
+        -:  303:            char response;
+    #####:  304:            scanf("%c", &response);
+    %%%%%:  304-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  305:
+    #####:  306:            while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  306-block  0
+    %%%%%:  306-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  306-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  306-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  306-block  4
+    %%%%%:  306-block  5
+    %%%%%:  306-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  307:
+    #####:  308:            if (response == 'y')
+    %%%%%:  308-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  309:            {
+    #####:  310:                if (_watchListService->add_movie(allMovies[current_movie_int].get_title(),
+    %%%%%:  310-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  311:                                                 allMovies[current_movie_int].get_genre(),
+    %%%%%:  311-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  311-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  312:                                                 allMovies[current_movie_int].get_year(), allMovies[current_movie_int].get_likes(),
+    %%%%%:  312-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  313:                                                 allMovies[current_movie_int].get_trailer()) == 1)
+    %%%%%:  313-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  313-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  313-block  2
+branch  6 never executed
+branch  7 never executed
+    #####:  314:                    printf("Movie added to the watch list.\n");
+    %%%%%:  314-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  315:                else printf("Movie already in the watch list.\n");
+    %%%%%:  315-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  316:                break;
+    %%%%%:  316-block  0
+        -:  317:            }
+    #####:  318:            else if (response == 'n')
+    %%%%%:  318-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  319:                break;
+    %%%%%:  319-block  0
+        -:  320:            else
+    #####:  321:                printf("Only y / n allowed.");
+    %%%%%:  321-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  322:        }
+    %%%%%:  322-block  0
+        -:  323:
+    #####:  324:        printf("Do you want to watch the next movie ? (y/n)");
+    %%%%%:  324-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  325:        while (true)
+        -:  326:        {
+        -:  327:            char response;
+    #####:  328:            scanf("%c", &response);
+    %%%%%:  328-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  329:
+    #####:  330:            while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  330-block  0
+    %%%%%:  330-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  330-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  330-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  330-block  4
+    %%%%%:  330-block  5
+    %%%%%:  330-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  331:
+    #####:  332:            if (response == 'y')
+    %%%%%:  332-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  333:            {
+    #####:  334:                current_movie_int = (current_movie_int + 1) % size;
+    #####:  335:                break;
+    %%%%%:  335-block  0
+        -:  336:            }
+    #####:  337:            else if (response == 'n')
+    %%%%%:  337-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  338:            {
+    #####:  339:                continue_watching = false;
+    #####:  340:                break;
+    %%%%%:  340-block  0
+        -:  341:            }
+        -:  342:            else
+    #####:  343:                printf("Only y / n allowed.");
+    %%%%%:  343-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  344:        }
+    %%%%%:  344-block  0
+        -:  345:
+    #####:  346:        printf("\n");
+    %%%%%:  346-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  347:    }
+        -:  348:
+    #####:  349:    free(allMovies);
+    %%%%%:  349-block  0
+        -:  350:}
+        -:  351:
+function _ZN7Console30delete_movie_from_watchlist_uiEv called 0 returned 0% blocks executed 0%
+    #####:  352:void Console::delete_movie_from_watchlist_ui()
+        -:  353:/*
+        -:  354: * If we want to delete a movie from the watchlist, we call this function. We type the title and then the function
+        -:  355: * deletes that movie from the watchList repository.
+        -:  356: */
+        -:  357:{
+        -:  358:    char title[101], c;
+        -:  359:
+    #####:  360:    printf("Title : ");
+    %%%%%:  360-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  361:    fgets(title, 101, stdin);
+    %%%%%:  361-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  361-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  362:
+    #####:  363:    remove_last_character(title);
+    %%%%%:  363-block  0
+call    0 never executed
+        -:  364:
+    #####:  365:    if (_watchListService->delete_movie(title) == 1) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  365-block  0
+branch  3 never executed
+branch  4 never executed
+    #####:  366:        printf("Movie deleted.\n");
+    %%%%%:  366-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  367:        printf("Do you want to like the movie you deleted? (y/n)");
+    %%%%%:  367-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  368:
+        -:  369:        char response;
+    #####:  370:        scanf("%c", &response);
+    %%%%%:  370-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  371:
+    #####:  372:        while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  372-block  0
+    %%%%%:  372-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  372-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  372-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  372-block  4
+    %%%%%:  372-block  5
+    %%%%%:  372-block  6
+branch  7 never executed
+branch  8 never executed
+        -:  373:
+    #####:  374:        if (response == 'y')
+    %%%%%:  374-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  375:        {
+    #####:  376:            int size = -1;
+    #####:  377:            Movie* allMovies = _movieService->get_all_movies(size);
+    %%%%%:  377-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  378:
+    #####:  379:            if (size == 0)
+    %%%%%:  379-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  380:            {
+    #####:  381:                printf("No movies yet.\n");
+    %%%%%:  381-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  382:
+    #####:  383:                return;
+    %%%%%:  383-block  0
+        -:  384:            }
+        -:  385:
+    #####:  386:            for (int i = 0; i < size; i++) {
+    %%%%%:  386-block  0
+    %%%%%:  386-block  1
+    %%%%%:  386-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:  387:                if (strcmp(allMovies[i].get_title(), title) == 0) {
+    %%%%%:  387-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  387-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:  388:                    if (_movieService->update_movie(allMovies[i].get_title(), allMovies[i].get_title(),
+    %%%%%:  388-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  388-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  388-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  389:                                                    allMovies[i].get_genre(), allMovies[i].get_year(),
+    %%%%%:  389-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  390:                                                    allMovies[i].get_likes() + 1, allMovies[i].get_trailer()) == 1)
+    %%%%%:  390-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  390-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  390-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  390-block  3
+branch  9 never executed
+branch 10 never executed
+    #####:  391:                        printf("Movie liked successfully.\n");
+    %%%%%:  391-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  392:                    else
+    #####:  393:                        printf("Going on.\n");
+    %%%%%:  393-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  394:                }
+        -:  395:            }
+        -:  396:        }
+    #####:  397:        else if (response == 'n')
+    %%%%%:  397-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  398:        {
+    #####:  399:            printf("Going on.\n");
+    %%%%%:  399-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  400:        }
+        -:  401:        else
+    #####:  402:            printf("Only y / n allowed.");
+    %%%%%:  402-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  403:    }
+    #####:  404:    else printf("There is no movie with the given title in the watch list. Operation canceled.\n");
+    %%%%%:  404-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  405:}
+        -:  406:
+function _ZN7Console20display_watchlist_uiEv called 0 returned 0% blocks executed 0%
+    #####:  407:void Console::display_watchlist_ui()
+        -:  408:/*
+        -:  409: * This function displays all the movies from the watchlist.
+        -:  410: */
+        -:  411:{
+    #####:  412:    printf("Displaying the watch list :\n");
+    %%%%%:  412-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  413:
+    #####:  414:    int size = -1;
+    #####:  415:    Movie* allMovies = _watchListService->get_all_movies(size);
+    %%%%%:  415-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  416:
+    #####:  417:    if (size == 0)
+    %%%%%:  417-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  418:        printf("No movies added to the watch list yet.\n");
+    %%%%%:  418-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  419:
+    #####:  420:    for (int i = 0; i < size; i++)
+    %%%%%:  420-block  0
+    %%%%%:  420-block  1
+    %%%%%:  420-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:  421:        printf("%d. Title: %s ; Genre : %s ; Year : %u ; Likes : %u ; Trailer : %s\n",
+    %%%%%:  421-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  422:               (i + 1), allMovies[i].get_title(), allMovies[i].get_genre(), allMovies[i].get_year(),
+    %%%%%:  422-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  422-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  422-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  423:               allMovies[i].get_likes(), allMovies[i].get_trailer());
+    %%%%%:  423-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  423-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  424:}
+    %%%%%:  424-block  0
+        -:  425:
+function _ZL18print_user_optionsv called 0 returned 0% blocks executed 0%
+    #####:  426:static void print_user_options() {
+    #####:  427:    printf("\nChoose the option:\n");
+    %%%%%:  427-block  0
+call    0 never executed
+    #####:  428:    printf("1. Display all movies of genre.\n");
+call    0 never executed
+    #####:  429:    printf("2. Delete movie from watch list.\n");
+call    0 never executed
+    #####:  430:    printf("3. Display the watch list.\n");
+call    0 never executed
+    #####:  431:    printf("0. Exit user mode.\n");
+call    0 never executed
+    #####:  432:}
+        -:  433:
+function _ZN7Console9user_menuEv called 0 returned 0% blocks executed 0%
+    #####:  434:void Console::user_menu()
+        -:  435:/*
+        -:  436:* Displays the user menu, which allows the user to add ten movies, add a movie, delete a movie, update a movie,
+        -:  437: * display all movies, or exit the program.
+        -:  438:*/
+        -:  439:{
+        -:  440:    while (true)
+        -:  441:    {
+    #####:  442:        print_user_options();
+    %%%%%:  442-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  443:
+    #####:  444:        int option = -1;
+    %%%%%:  444-block  0
+        -:  445:
+        -:  446:        while (true) {
+        -:  447:
+    #####:  448:            printf(">");
+    %%%%%:  448-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  449:
+    #####:  450:            if (scanf("%d", &option) == 1)
+    %%%%%:  450-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  450-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:  451:                break;
+    %%%%%:  451-block  0
+        -:  452:
+    #####:  453:            printf("The option should be an integer.\n");
+    %%%%%:  453-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  454:
+        -:  455:            int c;
+    #####:  456:            while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  456-block  0
+    %%%%%:  456-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  456-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  456-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  456-block  4
+    %%%%%:  456-block  5
+    %%%%%:  456-block  6
+branch  7 never executed
+branch  8 never executed
+    #####:  457:        }
+    %%%%%:  457-block  0
+        -:  458:
+        -:  459:        char newLine;
+    #####:  460:        scanf("%c", &newLine);
+    %%%%%:  460-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  461:
+    #####:  462:        if (option == 0)
+    %%%%%:  462-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  463:            break;
+    #####:  464:        else if (option == 1)
+    %%%%%:  464-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  465:            display_all_movies_of_genre_ui();
+    %%%%%:  465-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  466:        else if (option == 2)
+    %%%%%:  466-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  467:            delete_movie_from_watchlist_ui();
+    %%%%%:  467-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  468:        else if (option == 3)
+    %%%%%:  468-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  469:            display_watchlist_ui();
+    %%%%%:  469-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  470:        else
+    #####:  471:            printf("Invalid input.");
+    %%%%%:  471-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  472:    }
+    %%%%%:  472-block  0
+    #####:  473:}
+    %%%%%:  473-block  0
+        -:  474:
+function _ZL27print_administrator_optionsv called 0 returned 0% blocks executed 0%
+    #####:  475:static void print_administrator_options()
+        -:  476:{
+    #####:  477:    printf("\nChoose the option:\n");
+    %%%%%:  477-block  0
+call    0 never executed
+    #####:  478:    printf("1. Add a movie.\n");
+call    0 never executed
+    #####:  479:    printf("2. Delete a movie.\n");
+call    0 never executed
+    #####:  480:    printf("3. Update movie.\n");
+call    0 never executed
+    #####:  481:    printf("4. Display all movies.\n");
+call    0 never executed
+    #####:  482:    printf("0. Exit administrator mode.\n");
+call    0 never executed
+    #####:  483:}
+        -:  484:
+function _ZN7Console18administrator_menuEv called 0 returned 0% blocks executed 0%
+    #####:  485:void Console::administrator_menu()
+        -:  486:/*
+        -:  487:* Displays the administrator menu, which allows the user to add ten movies, add a movie,
+        -:  488: * delete a movie, update a movie, display all movies, or exit the program.
+        -:  489:*/
+        -:  490:{
+        -:  491:    while (true)
+        -:  492:    {
+    #####:  493:        print_administrator_options();
+    %%%%%:  493-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  494:
+    #####:  495:        int option = -1;
+    %%%%%:  495-block  0
+        -:  496:
+        -:  497:        while (true) {
+        -:  498:
+    #####:  499:            printf(">");
+    %%%%%:  499-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  500:
+    #####:  501:            if (scanf("%d", &option) == 1)
+    %%%%%:  501-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  501-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:  502:                break;
+    %%%%%:  502-block  0
+        -:  503:
+    #####:  504:            printf("The option should be an integer.\n");
+    %%%%%:  504-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  505:
+        -:  506:            int c;
+    #####:  507:            while ((c = getchar()) != '\n' && c != EOF);
+    %%%%%:  507-block  0
+    %%%%%:  507-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  507-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  507-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  507-block  4
+    %%%%%:  507-block  5
+    %%%%%:  507-block  6
+branch  7 never executed
+branch  8 never executed
+    #####:  508:        }
+    %%%%%:  508-block  0
+        -:  509:
+        -:  510:        char newLine;
+    #####:  511:        scanf("%c", &newLine);
+    %%%%%:  511-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  512:
+    #####:  513:        if (option == 0)
+    %%%%%:  513-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  514:            break;
+    #####:  515:        else if (option == 1)
+    %%%%%:  515-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  516:            add_movie_ui();
+    %%%%%:  516-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  517:        else if (option == 2)
+    %%%%%:  517-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  518:            delete_movie_ui();
+    %%%%%:  518-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  519:        else if (option == 3)
+    %%%%%:  519-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  520:            update_movie_ui();
+    %%%%%:  520-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  521:        else if (option == 4)
+    %%%%%:  521-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  522:            display_all_movies_ui();
+    %%%%%:  522-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  523:        else
+    #####:  524:            printf("Invalid input.");
+    %%%%%:  524-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  525:    }
+    %%%%%:  525-block  0
+    #####:  526:}
+    %%%%%:  526-block  0
+        -:  527:
+        -:  528:
+function _ZN7Console4menuEv called 1 returned 100% blocks executed 67%
+        1:  529:void Console::menu()
+        -:  530:/*
+        -:  531:* Runs the console by displaying the administrator menu and handling user input until the user chooses to exit.
+        -:  532:*/
+        -:  533:{
+        1:  534:    add_10_random_movies();
+        1:  534-block  0
+call    0 returned 1
+        -:  535:
+        -:  536:    while (true)
+        -:  537:    {
+        1:  538:        printf("\nHow you want to open the program?\n");
+        1:  538-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  539:        printf("1. Administrator mode.\n");
+        1:  539-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  540:        printf("2. User mode.\n");
+        1:  540-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  541:        printf("0. Exit the program.\n");
+        1:  541-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  542:        printf(">");
+        1:  542-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  543:
+        1:  544:        int option = -1;
+        -:  545:
+        1:  546:        int readStatus = scanf("%d", &option);
+        1:  546-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  547:
+        -:  548:        int c;
+       1*:  549:        while ((c = getchar()) != '\n' && c != EOF);
+        1:  549-block  0
+        1:  549-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  549-block  2
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  549-block  3
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  549-block  4
+        1:  549-block  5
+        1:  549-block  6
+branch  7 taken 0
+branch  8 taken 1 (fallthrough)
+        -:  550:
+        1:  551:        if (readStatus == 1)
+        1:  551-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        -:  552:        {
+        1:  553:            if (option == 0)
+        1:  553-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  554:                break;
+    #####:  555:            else if (option == 1)
+    %%%%%:  555-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  556:                administrator_menu();
+    %%%%%:  556-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  557:            else if (option == 2)
+    %%%%%:  557-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  558:                user_menu();
+    %%%%%:  558-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  559:        }
+        -:  560:        else
+        -:  561:        {
+    #####:  562:            printf("The mode should be an integer (either 1 or 2).\n");
+    %%%%%:  562-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  563:        }
+    #####:  564:    }
+    %%%%%:  564-block  0
+        1:  565:}
+        1:  565-block  0
