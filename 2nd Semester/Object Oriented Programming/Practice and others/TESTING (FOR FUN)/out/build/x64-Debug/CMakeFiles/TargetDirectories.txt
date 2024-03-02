@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTING (FOR FUN)/out/build/x64-Debug/CMakeFiles/TESTING__FOR_FUN_.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTING (FOR FUN)/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTING (FOR FUN)/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

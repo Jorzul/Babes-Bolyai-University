@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TESTINGQT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TESTINGQT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TESTINGQT-Debug-1dada2bd6e9cd7ddb185.json",
+					"name" : "TESTINGQT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TESTINGQT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TESTINGQT_autogen-Debug-9afe759d120aa47b3bf3.json",
+					"name" : "TESTINGQT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TESTINGQT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TESTINGQT_autogen_timestamp_deps-Debug-03d4518e99cefdbfc1d9.json",
+					"name" : "TESTINGQT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT/cmake-build-debug",
+		"source" : "C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

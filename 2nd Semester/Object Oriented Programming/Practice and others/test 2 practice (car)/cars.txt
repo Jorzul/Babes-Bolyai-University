@@ -1,0 +1,38 @@
+Body Style: Sedan
+Engine Type: Turbo
+Fuel Type: Gasoline
+Engine Price: 3001.000000
+Base Price: 11001.000000
+
+Body Style: Sedan
+Engine Type: Turbo
+Fuel Type: Diesel
+Engine Price: 3001.500000
+Base Price: 11001.500000
+
+Body Style: Sedan
+Type: Electric
+Fuel Type: Electric
+Autonomy: 6000
+Engine Price: 3060.000000
+Base Price: 11060.000000
+
+Body Style: Convertible
+Engine Type: Turbo
+Fuel Type: Gasoline
+Engine Price: 3001.000000
+Base Price: 12001.000000
+
+Body Style: Convertible
+Engine Type: Turbo
+Fuel Type: Diesel
+Engine Price: 3001.500000
+Base Price: 12001.500000
+
+Body Style: Convertible
+Type: Electric
+Fuel Type: Electric
+Autonomy: 15000
+Engine Price: 3150.000000
+Base Price: 12150.000000
+

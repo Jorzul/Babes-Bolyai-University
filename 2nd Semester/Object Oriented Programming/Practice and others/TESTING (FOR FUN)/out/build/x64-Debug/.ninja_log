@@ -1,0 +1,6 @@
+# ninja log v5
+53	144	7065659206419007	CMakeFiles/TESTING__FOR_FUN_.dir/main.cpp.obj	958ff0a8d7ac76b
+18	191	7065659206899579	CMakeFiles/TESTING__FOR_FUN_.dir/ui.cpp.obj	8c67807281b00252
+7	177	7065659206752568	CMakeFiles/TESTING__FOR_FUN_.dir/repository.cpp.obj	670b5ed1d59ac8da
+12	190	7065659206893187	CMakeFiles/TESTING__FOR_FUN_.dir/service.cpp.obj	1802b1806ab613c7
+3	187	7065659206855107	CMakeFiles/TESTING__FOR_FUN_.dir/domain.cpp.obj	9a9fb20588e6ea5f

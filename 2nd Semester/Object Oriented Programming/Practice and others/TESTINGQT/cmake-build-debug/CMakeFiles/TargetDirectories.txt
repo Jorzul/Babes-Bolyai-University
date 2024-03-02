@@ -1,0 +1,5 @@
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT/cmake-build-debug/CMakeFiles/TESTINGQT.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT/cmake-build-debug/CMakeFiles/TESTINGQT_autogen_timestamp_deps.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTINGQT/cmake-build-debug/CMakeFiles/TESTINGQT_autogen.dir

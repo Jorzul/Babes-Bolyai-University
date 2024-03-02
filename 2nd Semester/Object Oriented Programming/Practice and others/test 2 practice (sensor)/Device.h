@@ -1,0 +1,8 @@
+//
+// Created by User on 5/11/2023.
+//
+
+#ifndef TEST_2_PRACTICE_SENSOR_DEVICE_H
+#define TEST_2_PRACTICE_SENSOR_DEVICE_H
+
+#endif //TEST_2_PRACTICE_SENSOR_DEVICE_H

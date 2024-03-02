@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/testing/cmake-build-debug/CMakeFiles/testing.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/testing/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/testing/cmake-build-debug/CMakeFiles/rebuild_cache.dir

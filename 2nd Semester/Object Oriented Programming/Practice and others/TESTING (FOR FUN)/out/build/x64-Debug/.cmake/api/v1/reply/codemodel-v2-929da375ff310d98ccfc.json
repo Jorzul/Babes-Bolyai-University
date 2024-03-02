@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TESTING__FOR_FUN_",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TESTING__FOR_FUN_::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TESTING__FOR_FUN_-Debug-04294266c1325ab87282.json",
+					"name" : "TESTING__FOR_FUN_",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTING (FOR FUN)/out/build/x64-Debug",
+		"source" : "C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Programare orientare obiect/TESTING (FOR FUN)"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
