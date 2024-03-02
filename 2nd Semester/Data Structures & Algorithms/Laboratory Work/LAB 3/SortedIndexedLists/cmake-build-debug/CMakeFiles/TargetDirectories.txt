@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Structuri de date si algoritmi/LAB 3/SortedIndexedLists/cmake-build-debug/CMakeFiles/SortedIndexedLists.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Structuri de date si algoritmi/LAB 3/SortedIndexedLists/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 2/Structuri de date si algoritmi/LAB 3/SortedIndexedLists/cmake-build-debug/CMakeFiles/rebuild_cache.dir
