@@ -1,0 +1,120 @@
+ID: 9
+ExeStack:
+[((v:=integer);(v=2;print(v)))]
+SymTable:
+MyDictionary{map={}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[(v:=integer), (v=2;print(v))]
+SymTable:
+MyDictionary{map={}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[(v:=integer), (v=2;print(v))]
+SymTable:
+MyDictionary{map={}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[(v=2;print(v))]
+SymTable:
+MyDictionary{map={v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[(v=2;print(v))]
+SymTable:
+MyDictionary{map={v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[v=2, print(v)]
+SymTable:
+MyDictionary{map={v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[v=2, print(v)]
+SymTable:
+MyDictionary{map={v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[print(v)]
+SymTable:
+MyDictionary{map={v=2}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[print(v)]
+SymTable:
+MyDictionary{map={v=2}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 9
+ExeStack:
+[]
+SymTable:
+MyDictionary{map={v=2}}
+Out:
+MyList{output=[2]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------

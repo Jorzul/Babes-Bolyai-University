@@ -1,0 +1,600 @@
+ID: 2
+ExeStack:
+[((a:=Ref(integer));((b:=Ref(integer));((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))))))]
+SymTable:
+MyDictionary{map={}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(a:=Ref(integer)), ((b:=Ref(integer));((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))))]
+SymTable:
+MyDictionary{map={}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(a:=Ref(integer)), ((b:=Ref(integer));((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))))]
+SymTable:
+MyDictionary{map={}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[((b:=Ref(integer));((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[((b:=Ref(integer));((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(b:=Ref(integer)), ((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(b:=Ref(integer)), ((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[((v:=integer);(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(v:=integer), (new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(v:=integer), (new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer)}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(new(a,0);(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[new(a,0), (new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[new(a,0), (new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))]
+SymTable:
+MyDictionary{map={a=(0,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={}}
+-------------------------
+ID: 2
+ExeStack:
+[(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0}}
+-------------------------
+ID: 2
+ExeStack:
+[(new(b,0);(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0}}
+-------------------------
+ID: 2
+ExeStack:
+[new(b,0), (wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0}}
+-------------------------
+ID: 2
+ExeStack:
+[new(b,0), (wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(0,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0}}
+-------------------------
+ID: 2
+ExeStack:
+[(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[(wH(a,1);(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[wH(a,1), (wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[wH(a,1), (wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=0, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[(wH(b,2);(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[wH(b,2), (v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[wH(b,2), (v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=0}}
+-------------------------
+ID: 2
+ExeStack:
+[(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(v=rH(a) < rH(b)?100:200;(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v))))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=rH(a) < rH(b)?100:200, (print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=rH(a) < rH(b)?100:200, (print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(IF(rH(a) < rH(b))-> THEN(v=100)-> ELSE(v=200)), (print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(IF(rH(a) < rH(b))-> THEN(v=100)-> ELSE(v=200)), (print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=100, (print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=100, (print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=0}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(print(v);(v=rH(a) < rH(b) - 2?100:200;print(v)))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[print(v), (v=rH(a) < rH(b) - 2?100:200;print(v))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[print(v), (v=rH(a) < rH(b) - 2?100:200;print(v))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(v=rH(a) < rH(b) - 2?100:200;print(v))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(v=rH(a) < rH(b) - 2?100:200;print(v))]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=rH(a) < rH(b) - 2?100:200, print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=rH(a) < rH(b) - 2?100:200, print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(IF(rH(a) < rH(b) - 2)-> THEN(v=100)-> ELSE(v=200)), print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[(IF(rH(a) < rH(b) - 2)-> THEN(v=100)-> ELSE(v=200)), print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=200, print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[v=200, print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=100}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=200}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[print(v)]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=200}}
+Out:
+MyList{output=[100]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
+ID: 2
+ExeStack:
+[]
+SymTable:
+MyDictionary{map={a=(1,integer), b=(2,integer), v=200}}
+Out:
+MyList{output=[100, 200]}
+FileTable:
+[]
+Heap:
+MyDictionary{map={1=1, 2=2}}
+-------------------------
