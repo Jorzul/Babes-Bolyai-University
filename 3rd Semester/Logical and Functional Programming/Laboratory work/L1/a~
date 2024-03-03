@@ -1,0 +1,6 @@
+(defun linear-list-p (lst)
+  (if (null lst)
+      t
+      (if (atom (car lst))
+          (linear-list-p (cdr lst))
+          nil)))

@@ -1,0 +1,7 @@
+(defun replace-level(l e d)
+  (cond
+      ((AND (atom l) (eq (mod d 2) 1)) (list e))
+      ((atom l) (list l))
+      (t (list (mapcar #'(lambda (r) (replace-level r  e (+ d 1))) l)))
+   )
+)

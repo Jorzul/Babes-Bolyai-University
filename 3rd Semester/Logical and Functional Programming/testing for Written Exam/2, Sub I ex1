@@ -1,0 +1,10 @@
+(defun F(L)
+  (cond
+   ((NULL L) 0)
+   (T ((LAMBDA (V)
+         (IF (> V 2)
+             (+ (CAR L) (F (CDR L)))
+             (V))
+         ) (F (CAR L)) ))
+   )
+)

@@ -1,0 +1,7 @@
+(defun change_occ (lst e o p)
+  (cond
+   ((null lst) ())
+   ((AND (= (car lst) e) (= p 1)) (cons o (change_occ (cdr lst) e o 0)))
+   (t (cons (car lst) (change_occ (cdr lst) e o p)))
+   )
+)

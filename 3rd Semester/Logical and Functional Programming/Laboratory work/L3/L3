@@ -1,0 +1,6 @@
+(defun list-depth (lst)
+  (if (atom lst)
+      0
+    (1+ (reduce #'max (mapcar #'list-depth lst)))
+      )
+)

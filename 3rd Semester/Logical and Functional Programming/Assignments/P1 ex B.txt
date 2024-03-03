@@ -1,0 +1,27 @@
+% remove_first_three(X - element, L - list, R - result list)
+% flow model(i,i,o)
+remove_first_three(_, [], []).
+remove_first_three(X, [X|T], R) :-
+    remove_first_two(X, T, R).
+remove_first_three(X, [H|T], [H|R]) :-
+    X \= H,
+    remove_first_three(X, T, R).
+​
+%remove_first_two(X - element, L - list, R - result list)
+%flow model(i,i,o)
+remove_first_two(_, [], []).
+remove_first_two(X, [X|T], R) :-
+    remove_last(X, T, R).
+remove_first_two(X, [H|T], [H|R]) :-
+    X \= H,
+    remove_first_two(X, T, R).
+​
+%remove_last(X - element, L - list, R - result list)
+%flow model(i,i,o)
+remove_last(_, [], []).
+remove_last(X, [X|T], T).
+remove_last(X, [H|T], [H|R]) :-
+    X \= H,
+    remove_last(X, T, R).
+​
+% remove_first_three(2, [2,3,4,5,2,2,3,4], Result).

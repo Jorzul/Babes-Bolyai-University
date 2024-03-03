@@ -1,0 +1,24 @@
+(defun replace_nodes (L E d)
+  (cond
+   ((AND (ATOM L) (eq (MOD d 2) 1)) (list E))
+   ((ATOM L) (list L))
+   (T (list (mapcar #`(lambda (r) (replace_nodes r E (+ d 1))) L)))
+)
+)
+
+(defun replace_nod (L d k)
+  (cond
+   ((AND (atom L) (eq (mod d k) 1)) (list 0))
+   ((atom L) (list L))
+   (t (list (mapcar #`(lambda (r) (replace_nod r (+ d 1) k)) L)))
+   )
+)
+
+
+(defun replace-level(l e d)
+  (cond
+      ((AND (atom l) (eq (mod d 2) 1)) (list e))
+      ((atom l) (list l))
+      (t (list (mapcar #'(lambda (r) (replace-level r e (+ d 1))) l)))
+   )
+)

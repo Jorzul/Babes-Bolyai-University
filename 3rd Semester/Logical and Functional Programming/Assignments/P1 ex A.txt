@@ -1,0 +1,15 @@
+% part_of(X - integer, L - list)
+% Helper predicate to check if an integer is a part of the list
+part_of(X, [X|_]).
+part_of(X, [_|T]) :-
+    part_of(X, T).
+​
+%is_set(L - List)
+%flow model(i)
+is_set([]).
+is_set([H|T]) :-
+    \+ part_of(H, T),
+    is_set(T).
+​
+% is_set([1,2,3,4]). - true
+% is_set([1,2,3,3,3]). - false

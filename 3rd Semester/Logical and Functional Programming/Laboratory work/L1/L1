@@ -1,0 +1,43 @@
+; Problem A
+(defun linear-list-p (lst)
+  (cond
+   ((null lst) T)
+   ((atom(car lst)) (linear-list-p (cdr lst)))
+  )
+)
+
+; Problem B
+(defun change_occ (lst e o p)
+  (cond
+   ((null lst) ())
+   ((AND (= (car lst) e) (= p 1)) (cons o (change_occ (cdr lst) e o 0)))
+   (t (cons (car lst) (change_occ (cdr lst) e o p)))
+   )
+)
+
+; Problem C
+(defun replace_sublist (lst)
+  (cond
+   ((null lst) ())
+   ((listp (car lst)) (cons (last_el (car lst)) (replace_sublist (cdr lst))))
+   (t (cons (car lst) (replace_sublist (cdr lst))))
+   )
+)
+
+(defun last_el (lst)
+  (cond
+   ((null (cdr lst)) (car lst))
+   (t (last_el (cdr lst)))
+   )
+)
+
+; Problem D
+(defun merge-lists (lst1 lst2)
+  (cond
+   ((null lst1) lst2)
+   ((null lst2) lst1)
+   ((< (car lst1) (car lst2)) (cons (car lst1) (merge-lists (cdr lst1) lst2)))
+   ((> (car lst1) (car lst2)) (cons (car lst2) (merge-lists lst1 (cdr lst2))))
+   (t (cons (car lst1) (merge-lists (cdr lst1) (cdr lst2))))
+   )
+)

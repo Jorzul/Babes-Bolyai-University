@@ -1,0 +1,13 @@
+(defun balanced-tree-p (tree)
+  (cond
+   ((<= (- (depth-subtree (car (cdr tree)) 0) (depth-subtree (cdr (cdr tree)) 0)) 1) T)
+   ((<= (- (depth-subtree (cdr (cdr tree)) 0) (depth-subtree (car (cdr tree)) 0)) 1) T)
+   )
+)
+
+(defun depth-subtree (subtree d)
+  (cond
+   ((null subtree) d)
+   (t (depth-subtree (cdr subtree) (+ d 1)))
+   )
+)

@@ -1,0 +1,13 @@
+% insert_value(L - List, E - element, R - Result list)
+% flow_model (i,i,o)
+​
+insert_value([],_,_,_,[]).
+insert_value([H|T],E,I,I,[H,E|R]):-
+    NewI is I+1,
+    NewN is I*2+1,
+    insert_value(T,E,NewI,NewN,R).
+insert_value([H|T],E,I,N,[H|R]):-
+    NewI is I+1,
+    insert_value(T,E,NewI,N,R).
+insert_value(L,E,R):-
+    insert_value(L,E,1,1,R).

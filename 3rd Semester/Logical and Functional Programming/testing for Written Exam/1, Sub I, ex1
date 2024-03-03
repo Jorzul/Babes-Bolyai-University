@@ -1,0 +1,10 @@
+(defun Fct (F L)
+  (cond
+   ((NULL L) NIL)
+   (T ((LAMBDA (C)
+         (IF (C)
+             (CONS (C) (Fct F (CDR L)))
+           (NIL))
+         ) (FUNCALL F (CAR L))))
+   )
+)

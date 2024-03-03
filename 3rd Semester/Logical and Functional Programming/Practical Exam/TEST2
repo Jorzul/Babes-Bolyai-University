@@ -1,0 +1,21 @@
+(defun diff-lists (lst1 lst2)
+  (cond
+   ((null lst1) ())
+   ((null lst2) ())
+   (T (- (constr-nr (rev lst1) 0 1) (constr-nr (rev lst2) 0 1) ))
+   )
+)
+
+(defun constr-nr (lst nr zec)
+  (cond
+   ((null lst) nr)
+   (T (constr-nr (cdr lst) (+ (* (car lst) zec) nr) (* zec 10)))
+   )
+)
+
+(defun rev (lst)
+  (cond
+   ((null lst) '())
+   (T (append (rev (cdr lst)) (list (car lst))))
+   )
+)
