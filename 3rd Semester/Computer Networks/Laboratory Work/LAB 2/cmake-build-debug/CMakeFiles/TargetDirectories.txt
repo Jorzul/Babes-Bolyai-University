@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/Desktop/faculta/SEM 3/Retele de calculatoare/LAB 2/cmake-build-debug/CMakeFiles/LAB_2.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 3/Retele de calculatoare/LAB 2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/OneDrive/Desktop/faculta/SEM 3/Retele de calculatoare/LAB 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

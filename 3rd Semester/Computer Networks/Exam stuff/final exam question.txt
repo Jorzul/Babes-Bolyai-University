@@ -1,0 +1,18 @@
+what is the uni of the ....... 
+Raspuns: none of them (not 128)
+
+
+BROADCAST ADDRESS:
+
+IP: 132.45.99.0/19
+
+/19 = 11111111.11111111.11100000.00000000
+
+BROADCAST ADDRESS: IP OR !NETMASK
+		132.45.01100011.0 OR
+		0  .0 .00011111.255
+		`````````````````
+		132.45.01111111.255
+		132.45.127.255
+
+
