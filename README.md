@@ -3,4 +3,4 @@ Personal work i've done while studying at Bábes Bolyai University in Cluj-Napoc
 
 ## What can we find here?
 
-Here i have all the work i've done in every semester while studying at Bábes Bolyai University.
+Here i have all the materials i've colected while pursuing a Bachelor's Degree. Assignments, seminar work, bonus project, practice for tests, you name it and it will probably be here!
