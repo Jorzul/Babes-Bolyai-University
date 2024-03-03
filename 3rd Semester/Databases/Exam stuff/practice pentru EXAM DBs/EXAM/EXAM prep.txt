@@ -1,0 +1,26 @@
+				Exam
+
+1. Raspuns: C
+
+2. Raspuns: C
+
+3.
+300 - 50 = 250
+300 - 50 = 250
+300 - 100 = 200
+		700
+Raspuns: B
+
+4.	Trains		TrainTypes
+      1	``````	      1	``````````
+   |---	TID	   |---	TTID
+   |	Name	inf|	Name
+   |	TTID	---|	Description
+   |
+   |
+   |	Routes		RoutesStations		Stations
+   |	`````` 1    inf	``````````````	      1	``````````````
+   |	RID    -------	RID	   inf	 |-----	SID
+   |	Name		SID	   ------|	Name
+   |inf	ListStations	Arrival
+   |---	TID		Departure
